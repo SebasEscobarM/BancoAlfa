@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="349.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="addMovementBTN" layoutX="135.0" layoutY="314.0" mnemonicParsing="false" onAction="#addMovement" prefHeight="39.0" prefWidth="88.0" text="Añadir">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="typeCMB" layoutX="164.0" layoutY="103.0" prefHeight="25.0" prefWidth="165.0" promptText="-" />
+      <TextField fx:id="mountTF" layoutX="180.0" layoutY="153.0" />
+      <TextField fx:id="commentTF" layoutX="112.0" layoutY="203.0" prefHeight="25.0" prefWidth="219.0" />
+      <Label layoutX="26.0" layoutY="106.0" text="Tipo de movimiento:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="156.0" text="Monto del movimiento:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="205.0" text="Descripción:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="33.0" text="Añadir movimiento">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="258.0" text="Fecha:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="movementDTE" layoutX="77.0" layoutY="256.0" prefHeight="25.0" prefWidth="250.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar layoutY="-1.0" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Añadir">
+            <items>
+              <MenuItem fx:id="addMovementMNU" mnemonicParsing="false" onAction="#addMovement" text="Movimiento" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Ventana">
+              <items>
+                <MenuItem fx:id="exitMNU" mnemonicParsing="false" onAction="#exit" text="Salir" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.65" layoutX="45.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+        <items>
+          <AnchorPane minHeight="600.0" minWidth="400.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="movimientosTBL" layoutX="32.0" layoutY="234.0" minWidth="490.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                     <columns>
+                        <TableColumn fx:id="tipoCLM" prefWidth="77.0" text="Tipo" />
+                        <TableColumn fx:id="mountCLM" prefWidth="149.0" text="Monto" />
+                        <TableColumn fx:id="commentCLM" prefWidth="195.0" text="Descripción" />
+                        <TableColumn fx:id="dateCLM" minWidth="0.0" prefWidth="118.0" text="Fecha" />
+                     </columns>
+                  </TableView>
+                  <StackPane layoutX="-1.0" layoutY="-1.0" prefHeight="40.0" prefWidth="293.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label text="Movimientos" StackPane.alignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane maxWidth="350.0" minHeight="600.0" minWidth="350.0" prefHeight="160.0" prefWidth="519.0">
+               <children>
+                  <Pane layoutX="31.0" layoutY="29.0" prefHeight="100.0" prefWidth="626.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="35.0" layoutY="25.0" text="Sistema de banco">
+                           <font>
+                              <Font name="System Bold" size="34.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutY="99.0" prefHeight="0.0" prefWidth="350.0" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="75.0" layoutY="179.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+                     <children>
+                        <Pane layoutY="394.0" prefHeight="374.0" prefWidth="350.0">
+                           <children>
+                              <GridPane prefHeight="200.0" prefWidth="350.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="142.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.0" minWidth="10.0" prefWidth="208.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="21.0" prefWidth="216.0" text="  Filtrar:">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="21.0" prefWidth="134.0" text="   Fecha inicial:" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="21.0" prefWidth="177.0" text="    Fecha final:" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="initDate" prefHeight="31.0" prefWidth="195.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <DatePicker fx:id="finishDate" prefHeight="31.0" prefWidth="195.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <Button fx:id="filterBTN" layoutX="140.0" layoutY="214.0" mnemonicParsing="false" onAction="#filterData" prefHeight="27.0" prefWidth="70.0" text="Filtrar">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="deleteFltBTN" layoutX="117.0" layoutY="274.0" mnemonicParsing="false" onAction="#clearFilter" text="Eliminar filtro">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="389.0" prefWidth="350.0">
+                           <children>
+                              <Button fx:id="addMovementBTN" layoutX="96.0" layoutY="257.0" mnemonicParsing="false" onAction="#addMovement" text="Añadir movimiento">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="deleteBTN" layoutX="89.0" layoutY="313.0" mnemonicParsing="false" onAction="#deleteMovement" prefHeight="37.0" prefWidth="171.0" text="Eliminar movimiento">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                              <GridPane prefHeight="218.0" prefWidth="350.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="179.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.0" minWidth="0.0" prefWidth="13.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="158.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="21.0" prefWidth="176.0" text="                   Ingresos:" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="21.0" prefWidth="193.0" text="                     Gastos:" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="21.0" prefWidth="187.0" text="                       Total:" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="\$" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="\$" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="\$" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="ingrLBL" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="gstsLBL" text="0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="totalLBL" text="0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                              <Label layoutX="10.0" layoutY="10.0" prefHeight="21.0" prefWidth="216.0" text="Balance:">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutY="387.0" prefHeight="0.0" prefWidth="350.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
